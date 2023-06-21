@@ -1,3 +1,4 @@
+echo ""
 datetime=$(date)
 echo "System Report genrated by $USER, $datetime" 
 
