@@ -33,7 +33,7 @@ ip=$(hostname -I)
 ipr=$(ip r | awk '/default/ {print $3}')
 dns=$(cat /etc/resolv.conf | awk '/nameserver/ {print $2}')
 iname=$(ip link show | awk ' !/link/ {print $2}')
-echo "FQDN: $dnsdomainname"
+echo "FQDN: $(hostname --fqdn)"
 echo "Host address: $ip"
 echo "Gateway IP: $ipr"
 echo "Dns Server: $dns"
